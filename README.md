@@ -71,16 +71,6 @@ Evaluation metrics:
 * **MAE (Mean Absolute Error)**
 * **R² Score**
 
-Model Comparison:
-
-    Model	          RMSE (log)	 MAE (log)	R² (log)	  RMSE (orig)	MAE (orig)	R² (orig)
-Linear Regression	  0.3097	     0.2344	    0.7249	    31.16	      12.98	      0.4661
-Random Forest	      0.0512	     0.0254	    0.9925	    3.36	      1.38	      0.9938
-XGBoost Baseline	  0.0785	     0.0546	    0.9823	    5.59	      3.00	      0.9828
-XGBoost Tuned	      0.0519	     0.0293	    0.9923	    3.38	      1.58	      0.9937
-
-Deployment Decision
-After evaluating performance metrics, stability, and generalization, the Random Forest model is selected for deployment.
 ---
 
 ## 📈 Visualization
