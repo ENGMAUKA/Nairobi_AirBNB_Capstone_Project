@@ -75,25 +75,27 @@ Evaluation metrics:
 
 ## 📈 Visualization
 
-### Price Distribution of Listings
+### Price Distribution of Listings:
 
 <img width="1384" height="484" alt="image" src="https://github.com/user-attachments/assets/a036d7e4-1e46-4b45-bd08-b7c59362f5dd" />
 
-### Frequency of Room Type
+### Frequencies:
 
 <img width="1784" height="483" alt="image" src="https://github.com/user-attachments/assets/362a4032-fcd8-4e58-bc61-542ebc797ff5" />
 
-### Time-based Analysis
+### Time-based Analysis:
 
 <img width="867" height="489" alt="image" src="https://github.com/user-attachments/assets/8d6cdbf0-e483-483d-88a1-98459a2cbe7a" />
 
+<img width="872" height="489" alt="image" src="https://github.com/user-attachments/assets/0524e8af-0f70-4d1e-b9a1-7545a2dfbd9c" />
+
 <img width="1184" height="584" alt="image" src="https://github.com/user-attachments/assets/cc03a0a4-bd28-4bf8-8b9e-5b96bd66c6a3" />
 
-### Correlation Heatmap
+### Correlation Heatmap:
 
 <img width="880" height="784" alt="image" src="https://github.com/user-attachments/assets/9715fc94-bd7e-423a-8ee9-5a3bee7a0f58" />
 
-### Geospatial Map of Listings & Sentiment Overlay
+### Geospatial Map of Listings & Sentiment Overlay:
 
 <img width="838" height="650" alt="image" src="https://github.com/user-attachments/assets/791e33cc-050d-41be-8ecc-09bb58c39d96" />
 
