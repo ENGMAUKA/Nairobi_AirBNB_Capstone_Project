@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 Airbnb Price Prediction</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+            width: 420px;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        h1 {
+            text-align: center;
+            color: #0d47a1;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        input, select {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+        button {
+            background-color: #1976d2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0d47a1;
+        }
+        .result {
+            text-align: center;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-top: 15px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🏠 Airbnb Price Prediction</h1>
+        <form action="/predict" method="post">
+
+            <!-- Updated Listing Type Options -->
+            <select name="listing_type" required>
+                <option value="">Select Listing Type</option>
+                <option value="entire rental unit">Entire rental unit</option>
+                <option value="entire condo">Entire condo</option>
+                <option value="entire serviced apartment">Entire serviced apartment</option>
+                <option value="entire home">Entire home</option>
+                <option value="entire guesthouse">Entire guesthouse</option>
+                <option value="entire guest suite">Entire guest suite</option>
+                <option value="private room in rental unit">Private room in rental unit</option>
+                <option value="treehouse">Treehouse</option>
+                <option value="entire cottage">Entire cottage</option>
+                <option value="entire chalet">Entire chalet</option>
+                <option value="private room in home">Private room in home</option>
+                <option value="entire loft">Entire loft</option>
+                <option value="entire bungalow">Entire bungalow</option>
+                <option value="bus">Bus</option>
+                <option value="entire cabin">Entire cabin</option>
+                <option value="tiny home">Tiny home</option>
+                <option value="private room in cottage">Private room in cottage</option>
+                <option value="entire villa">Entire villa</option>
+                <option value="private room in condo">Private room in condo</option>
+                <option value="private room in nature lodge">Private room in nature lodge</option>
+                <option value="private room in bed and breakfast">Private room in bed and breakfast</option>
+                <option value="private room in villa">Private room in villa</option>
+                <option value="room in bed and breakfast">Room in bed and breakfast</option>
+                <option value="private room in serviced apartment">Private room in serviced apartment</option>
+                <option value="private room in guest suite">Private room in guest suite</option>
+                <option value="private room">Private room</option>
+                <option value="room in boutique hotel">Room in boutique hotel</option>
+            </select>
+
+            <!-- Updated Room Type Options -->
+            <select name="room_type" required>
+                <option value="">Select Room Type</option>
+                <option value="entire_home">Entire home</option>
+                <option value="private_room">Private room</option>
+                <option value="hotel_room">Hotel room</option>
+            </select>
+
+            <select name="superhost" required>
+                <option value="">Superhost?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <select name="instant_book" required>
+                <option value="">Instant Book?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <!-- Numeric Inputs -->
+            <input type="number" step="0.1" name="bedrooms" placeholder="Bedrooms" required>
+            <input type="number" step="0.1" name="beds" placeholder="Beds" required>
+            <input type="number" step="0.1" name="baths" placeholder="Bathrooms" required>
+            <input type="number" step="0.1" name="guests" placeholder="Guests" required>
+            <input type="number" step="0.1" name="photos_count" placeholder="Number of Photos" required>
+            <input type="number" step="0.1" name="num_reviews_x" placeholder="Number of Reviews" required>
+            <input type="number" step="0.1" name="rating_overall" placeholder="Overall Rating" required>
+            <input type="number" step="0.1" name="rating_cleanliness" placeholder="Cleanliness Rating" required>
+            <input type="number" step="0.1" name="rating_location" placeholder="Location Rating" required>
+            <input type="number" step="0.1" name="rating_value" placeholder="Value Rating" required>
+            <input type="number" step="0.1" name="rating_communication" placeholder="Communication Rating" required>
+            <input type="number" step="0.1" name="occupancy" placeholder="Occupancy Rate (%)" required>
+            <input type="number" step="0.1" name="booking_lead_time_avg" placeholder="Booking Lead Time (days)" required>
+            <input type="number" step="0.1" name="length_of_stay_avg" placeholder="Average Length of Stay (days)" required>
+            <input type="number" step="0.1" name="min_nights_avg" placeholder="Minimum Nights" required>
+
+            <!-- Location -->
+            <input type="number" step="0.000001" name="latitude" placeholder="Latitude" required>
+            <input type="number" step="0.000001" name="longitude" placeholder="Longitude" required>
+
+            <button type="submit">Predict Price</button>
+        </form>
+
+        <div class="result">{{ prediction_text }}</div>
+    </div>
+</body>
+</html>
