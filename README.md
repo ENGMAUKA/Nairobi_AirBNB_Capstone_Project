@@ -9,8 +9,9 @@
 3. [Data Understanding](#data-understanding)
 4. [Modeling](#modeling)
 5. [Visualization](#visualization)
-6. [Conclusion](#conclusion)
-7. [Collaborators](#collaborators)
+6. [Recommendations](#reommendations)
+7. [Conclusion](#conclusion)
+8. [Collaborators](#collaborators)
 
 ---
 
@@ -31,7 +32,6 @@ The key questions addressed:
 
 * Which features drive listing **prices** in Nairobi?
 * What factors influence **occupancy performance**?
-* How do **guest sentiments** (reviews) correlate with listing performance?
 * What geospatial patterns emerge in pricing and occupancy across Nairobi?
 
 ---
@@ -56,14 +56,12 @@ Libraries used:
 
 ## 🤖 Modeling
 
-Several predictive approaches were tested:
+The following models were adopted for both **price** and **occupancy** predictions:
 
-* **Regression Models**: Linear Regression, Ridge, Lasso, ElasticNet
-* **Ensemble Methods**: Random Forest Regressor, XGBoost Regressor
-* **Text Analysis**:
-
-  * **VADER Sentiment** → polarity scores from reviews
-  * **BERTopic** → topic clusters of guest feedback
+* Linear Regression Baseline Model
+* Random Forest
+* XGBoost Baseline
+* XGBoost Hyperparameter Tuning
 
 Evaluation metrics:
 
@@ -99,7 +97,37 @@ Evaluation metrics:
 
 <img width="838" height="650" alt="image" src="https://github.com/user-attachments/assets/791e33cc-050d-41be-8ecc-09bb58c39d96" />
 
+<img width="1143" height="512" alt="image" src="https://github.com/user-attachments/assets/3ecdcb9b-6b3f-4287-9395-3491b403e741" />
+
+### Pricing Determinants:
+
+<img width="1065" height="529" alt="image" src="https://github.com/user-attachments/assets/b5bf0e25-7263-42f3-86bd-34a41d436c33" />
+
+**Top key determinants of pricing in Airbnb listings in Nairobi:**
+* Location
+* Photos count
+* Guests
+* Listing type
+* Number of reviews
+* Beds per bedroom
+
+### Occupancy Determinants:
+
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/48a61e59-f642-4bfd-8f90-60bc2a4cc3e3" />
+
+**Top key determinants of occupancy in Airbnb listings in Nairobi:**
+* Length of stay
+* Available days
+* Booking lead time
+* Rate
+
 ---
+## Recommendations
+
+* Investors and hosts should invest more on entire homes as the bar chart on Average Revenue by Room Type shows entire homes generate the most revenue (64.3%), followed by private rooms (22.8%), with hotel rooms earning the least (12.8%).
+* Investors and hosts should focus on high-demand central zones for consistent bookings, while premium pricing strategies can succeed in select outlying neighborhoods.
+* Investors should target locations where listings are highly concentrated in central Nairobi areas such as Westlands, Kilimani, and Kileleshwa, which combine high revenues with strong occupancy rates
+* Hosts to eye on the weekends for boosted revenues since the trend from the EDA shows that occupancy is generally lower on weekdays, with a peak on Saturday. Thursday shows particularly low occupancy, likely because most bookings occur over the weekend.
 
 ---
 
