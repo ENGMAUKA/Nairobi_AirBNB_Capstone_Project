@@ -97,12 +97,8 @@ Evaluation metrics:
 
 <img width="838" height="650" alt="image" src="https://github.com/user-attachments/assets/791e33cc-050d-41be-8ecc-09bb58c39d96" />
 
-<img width="1143" height="512" alt="image" src="https://github.com/user-attachments/assets/3ecdcb9b-6b3f-4287-9395-3491b403e741" />
-
 ### Pricing Determinants:
-
 <img width="1065" height="529" alt="image" src="https://github.com/user-attachments/assets/b5bf0e25-7263-42f3-86bd-34a41d436c33" />
-
 **Top key determinants of pricing in Airbnb listings in Nairobi:**
 * Location
 * Photos count
@@ -112,9 +108,7 @@ Evaluation metrics:
 * Beds per bedroom
 
 ### Occupancy Determinants:
-
 <img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/48a61e59-f642-4bfd-8f90-60bc2a4cc3e3" />
-
 **Top key determinants of occupancy in Airbnb listings in Nairobi:**
 * Length of stay
 * Available days
